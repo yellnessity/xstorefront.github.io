@@ -1,0 +1,121 @@
+﻿<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" >
+<title>x-store</title>
+<link rel="stylesheet" type="text/css" href="style.css" />
+<script src="slider.js"></script>
+</head>
+<body>
+
+<div class="wrapper">
+<header>
+<div class='s'>
+	<div class='s1'><a href="#"><font color="#CC0000">x</font>-store <font size="2">inc.</font><img align="center" height="50px" src="img/circles.png"></img></a></div>
+	<div class='s2'>
+	<a href="#">поиск</a>
+	<a href="#">акции</a>
+	<a href="#">корзина</a>
+	<a href="#">вход</a>
+	</div>
+</div>
+<div class="search">
+<img align="center" src="img/phone.png" ></img>+7 999 999 99 99
+</div>
+</header>
+
+<ul name="3" class="banner">
+<li class="slide current">
+	<div class="overlay" >
+		<img src="img/banner1.jpg" />
+	</div>
+	<div class="caption"><span>iPhone <font>X</font></span>
+		<p>по специальным ценам.</p></div>
+</li>
+
+<li class="slide">
+	<div class="overlay">
+		<img src="img/banner2.jpg" />
+	</div>
+<div class="caption">iPhone SE</div>
+</li>
+
+<li class="slide">
+	<div class="overlay" >
+		<img src="img/banner3.jpg" />
+	</div>
+<div class="caption">x-store</div>
+</li>
+
+<li><a class="next" href="#3">&#10095;</a></li>
+<li><a class="prev" href="#3">&#10094;</a></li>
+</ul>
+<div style="text-align:center">
+  <span class="dot active" onclick="Dot_Click (1);"></span>
+  <span class="dot" onclick="Dot_Click (2);"></span>
+  <span class="dot" onclick="Dot_Click (3);"></span>
+</div>
+
+
+<div class="container">
+<nav>
+<a class="phone_menu" href="#"><img align="center" src="img/cont.png"></img><span>смартфоны</span></a>
+<a class="tablet_menu" href="#"><img align="center" src="img/cont.png"></img><span>планшеты</span></a>
+<a class="access_menu" href="#"><img align="center" src="img/cont.png"></img><span>аксессуары</span></a>
+</nav>
+
+<aside>
+<a href="#"><img height="400px" src="img/aside.png"></img></a>
+</aside>
+</div>
+
+<div name="1" class="content">
+<div name="2" class="switch">
+<a class="new" href="#1">новинки</a><a class="popular" href="#2">популярное</a>
+</div>
+<div class="items">
+<div>
+<a href="#1"><div class="img_wrap"><img src="img/item.png"></img></div></a><br>
+<a class="descr" href="#1">iPhone SE 16 GB “Rose Gold”</a>
+<div class="price_wrap"><font>19990 -</font><br>
+<p><a class="click" href="#1"><strong>КУПИТЬ</strong></a></p></div>
+</div>
+<div class="item_two">
+<a href="#1"><div class="img_wrap"><img src="img/item.png"></img></div></a><br>
+<a class="descr" href="#1">iPhone SE 16 GB “Rose Gold”</a>
+<div class="price_wrap"><font>19990 -</font><br>
+<p><a class="click" href="#1"><strong>КУПИТЬ</strong></a></p></div>
+</div>
+<div>
+<a href="#1"><div class="img_wrap"><img src="img/item.png"></img></div></a><br>
+<a class="descr" href="#1">iPhone SE 16 GB “Rose Gold”</a>
+<div class="price_wrap"><font>19990 -</font><br>
+<p><a class="click" href="#1"><strong>КУПИТЬ</strong></a></p></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<footer>
+<span>x-store® 2018. | All Rights Reserved.</span>
+</footer>
+
+</body>
+<script>
+var imgs = document.querySelectorAll(".banner .slide");
+var dots = document.querySelectorAll(".dot");
+function Dot_Click (n) {
+	for(var i = 0; i < imgs.length; i++)
+  {
+  	if (imgs[i].classList.contains("current"))
+    {
+			dots[i].classList.remove("active");
+			imgs[i].classList.remove("current");
+			break;
+    }
+  }
+	imgs[n-1].classList.add("current");
+	dots[n-1].classList.add("active");
+}
+</script>
+</html>
